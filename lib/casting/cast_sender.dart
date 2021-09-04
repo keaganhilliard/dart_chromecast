@@ -196,6 +196,11 @@ class CastSender extends Object {
     _castMediaAction('VOLUME', map);
   }
 
+  void setPlayBackRate(double rate) {
+    Map<String, dynamic> map = {'playbackRate': rate};
+    _castMediaAction('SET_PLAYBACK_RATE', map);
+  }
+
   CastSession? get castSession => _castSession;
 
   // private
